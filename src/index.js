@@ -1,19 +1,19 @@
 
-require("./asteroid");
+// require("./asteroid");
+// require("./bullet");
+// require("./game_view");
+// require("./game");
+// require("./moving_object");
+// require("./ship");
+// require("./utils");
+
+
 require("../dist/canvas");
-require("./bullet");
-require("./game_view");
-require("./game");
-require("./moving_object");
-require("./ship");
-require("./utils");
-
-// console.log("Webpack workiing");
-
 const MovingObject = require("./moving_object.js");
-window.MovingObject = MovingObject;
-
 const Asteroid = require("./asteroid.js");
+
+
+window.MovingObject = MovingObject;
 window.Asteroid = Asteroid;
 
 window.addEventListener('DOMContentLoaded', (event) => {
