@@ -1,6 +1,6 @@
 
 require("./asteroid");
-// require("../dist/canvas");
+require("../dist/canvas");
 require("./bullet");
 require("./game_view");
 require("./game");
@@ -10,9 +10,13 @@ require("./utils");
 
 console.log("Webpack workiing");
 
-export function hello(name) {
-    console.log(`hello ${name}`);
-}
+const MovingObject = require("./moving_object.js");
+
+window.MovingObject = MovingObject;
+
+const Basic = require("./moving_object.js");
+
+window.Basic = Basic;
 
 // import _ from 'lodash';
 
