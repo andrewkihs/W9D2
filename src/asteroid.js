@@ -2,9 +2,10 @@
 const Utils = require("./utils.js");
 const MovingObject = require("./moving_object.js")
 
+const COLOR = "grey";
+const RADIUS = 30;
+
 function Asteroid (pos) { 
-    const COLOR = "grey";
-    const RADIUS = 200;
     MovingObject.call(this, {
         color: COLOR,
         radius: RADIUS,
