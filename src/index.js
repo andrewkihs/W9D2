@@ -11,8 +11,10 @@ require("./utils");
 // console.log("Webpack workiing");
 
 const MovingObject = require("./moving_object.js");
-
 window.MovingObject = MovingObject;
+
+const Asteroid = require("./asteroid.js");
+window.Asteroid = Asteroid;
 
 window.addEventListener('DOMContentLoaded', (event) => {
   
@@ -30,8 +32,12 @@ window.addEventListener('DOMContentLoaded', (event) => {
     mo.move();
     mo.draw(ctx);
 
+    const asteroid = new Asteroid([250,250]);
+    console.log(asteroid);
+    asteroid.draw(ctx);
 
 });
+
 
 // import _ from 'lodash';
 
