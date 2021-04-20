@@ -8,15 +8,30 @@ require("./moving_object");
 require("./ship");
 require("./utils");
 
-console.log("Webpack workiing");
+// console.log("Webpack workiing");
 
 const MovingObject = require("./moving_object.js");
 
 window.MovingObject = MovingObject;
 
-const Basic = require("./moving_object.js");
+window.addEventListener('DOMContentLoaded', (event) => {
+  
+    const canvasEle = document.getElementById("game-canvas");
+    const ctx = canvasEle.getContext("2d");
 
-window.Basic = Basic;
+    const mo = new MovingObject({
+        pos: [30, 30],
+        vel: [10, 10],
+        radius: 5,
+        color: "#00FF00"
+    });
+
+    mo.draw(ctx);
+    mo.move();
+    mo.draw(ctx);
+
+
+});
 
 // import _ from 'lodash';
 
